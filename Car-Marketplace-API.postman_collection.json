@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "0545bbe1-39bb-4048-aaeb-42a444ca9bf1",
+		"name": "Car-Marketplace-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38937262"
+	},
+	"item": [
+		{
+			"name": "Car",
+			"item": [
+				{
+					"name": "localhost:8000/api/v1/cars?make=test1&model=model2&price=3000",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/cars?make=test1&model=model2&price=3000",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"cars"
+							],
+							"query": [
+								{
+									"key": "make",
+									"value": "test1"
+								},
+								{
+									"key": "model",
+									"value": "model2"
+								},
+								{
+									"key": "price",
+									"value": "3000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/v1/cars",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNjc0MzE5YzctMGU0ZS00YTJiLTkyMzEtOGEyMDU2MmY0ZTVhIiwidXNlcm5hbWUiOiJ0ZXN0dXNlciIsInJvbGUiOiJzdXBlcnVzZXIiLCJpYXQiOjE3Mjg1OTY2ODd9.MGzN2-7dMXeJRBxJzRFH4uUbwVwMBV4Bp4vQYJjgsRM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"make\": \"test1\",\r\n    \"model\": \"test model1\",\r\n    \"year\": 2024,\r\n    \"price\": 5000,\r\n    \"mileage\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/v1/cars"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "localhost:8000/api/v1/bookings",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiYTQ1MmQ5MDQtMzZhNC00M2U0LWJkODctYTE2NzkyZGQ1OGQ0IiwidXNlcm5hbWUiOiJ0ZXN0dXNlcjEiLCJyb2xlIjoidXNlciIsImlhdCI6MTcyODU5NzE2M30.ruq5pHBNsau6UXOcvG_hK18QaRg1weMPA07KKqQ33W0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"carId\": \"c1ac65b1-9d07-46bb-bb68-be41d4f7411e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/v1/bookings"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8000/api/v1/bookings/1d491772-90df-4076-bcbe-8c4e65522383",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiYTQ1MmQ5MDQtMzZhNC00M2U0LWJkODctYTE2NzkyZGQ1OGQ0IiwidXNlcm5hbWUiOiJ0ZXN0dXNlcjEiLCJyb2xlIjoidXNlciIsImlhdCI6MTcyODU5NzE2M30.ruq5pHBNsau6UXOcvG_hK18QaRg1weMPA07KKqQ33W0",
+								"type": "text"
+							}
+						],
+						"url": "localhost:8000/api/v1/bookings/1d491772-90df-4076-bcbe-8c4e65522383"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "localhost:8000/api/v1/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"testuser\",\r\n    \"password\": \"pwd123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/api/v1/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "localhost:8000/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8000/health"
+			},
+			"response": []
+		}
+	]
+}

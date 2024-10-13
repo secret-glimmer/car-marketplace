@@ -28,3 +28,7 @@ Before you begin, ensure you have met the following requirements:
 ```bash
  docker compose up -d
 ```
+
+## Postman Collection
+
+The root folder contains a Postman collection file named `Car-Marketplace-API.postman_collection.json`.
