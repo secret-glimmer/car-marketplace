@@ -1,0 +1,26 @@
+services:
+    postgres:
+        image: postgres:latest
+        container_name: postgres_container
+        restart: unless-stopped
+        volumes:
+            - db:/var/lib/postgres:Z
+        env_file:
+            - .env
+
+    backend-app:
+        build: .
+        image: car-marketplace:latest
+        container_name: car-marketplace
+        ports:
+            - '8000:8000'
+        env_file:
+            - .env
+        depends_on:
+            - postgres
+        restart: on-failure
+        links:
+            - 'postgres:database'
+volumes:
+    db:
+        name: db
