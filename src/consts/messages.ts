@@ -30,3 +30,13 @@ export const PRICE_REQUIRED = "price is required.";
 export const MILEAGE_REQUIRED = "mileage is required.";
 export const INVALID_PRICE = "Invalid price";
 export const INVALID_MILEAGE = "Invalid mileage";
+
+// booking
+export const CANCELLATION_POLICY_MESSAGE = "Cannot cancel within 24 hours!";
+export const BOOKING_CANCELLATION_SUCCESS = "Booking cancelled successfully.";
+export const BOOKING_CREATION_SUCCESS = "Booking created successfully.";
+export const BOOKING_DUPLICATED = "This booking already exists.";
+export const CANCEL_PERMISSION_DENIED =
+  "You do not have permission to cancel this booking.";
+export const CARID_REQUIRED = "carId is required.";
+export const BOOKINGID_REQUIRED = "bookingId is required.";
