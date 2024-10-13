@@ -17,3 +17,16 @@ export const USERNAME_REQUIRED = "username is required.";
 export const PASSWORD_REQUIRED = "password is required.";
 
 export const INVALID_ARGUMENTS = "Invalid Arguments";
+
+// car
+export const ERROR_ROLE_MISMATCH = "Only a superuser can create a car.";
+export const NOT_FOUND_MESSAGE = "The requested data was not found.";
+export const CAR_CREATION_SUCCESS = "Car created successfully.";
+export const CAR_NOT_FOUND = "Car does not exist.";
+export const MAKE_REQUIRED = "make is required.";
+export const MODEL_REQUIRED = "model is required.";
+export const YEAR_REQUIRED = "year is required.";
+export const PRICE_REQUIRED = "price is required.";
+export const MILEAGE_REQUIRED = "mileage is required.";
+export const INVALID_PRICE = "Invalid price";
+export const INVALID_MILEAGE = "Invalid mileage";
